@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>L’Ombra · Materialien, Qualität & Preise</title>
+<style>
+:root{--bg:#080808;--p:#101010;--p2:#151515;--gold:#b79a5a;--text:#eee9df;--muted:#9f988d;--line:#29251e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 70% 10%,rgba(183,154,90,.08),transparent 28%);z-index:-1}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;padding:16px 6vw;display:flex;justify-content:space-between;align-items:center;background:#080808dd;backdrop-filter:blur(12px);border-bottom:1px solid #211e19}
+.logo{font:18px Georgia,serif;letter-spacing:.18em;white-space:nowrap;flex:0 0 auto}
+.nav{display:flex;align-items:center;justify-content:flex-end;gap:8px;font-size:10px;letter-spacing:.10em;color:var(--muted);flex-wrap:wrap}
+.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:8px 11px;border:1px solid transparent;white-space:nowrap;transition:.2s ease}
+.nav a:hover{color:var(--gold);border-color:#3a3327;background:#10100f}
+a{color:inherit;text-decoration:none}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 7vw 80px;background:linear-gradient(#0008,#080808f4),url("assets/images/hero-hafen-container.png") center/cover}
+.eyebrow{color:var(--gold);letter-spacing:.35em;font-size:11px;text-transform:uppercase}.hero h1{font:clamp(58px,10vw,125px) Georgia,serif;letter-spacing:.08em;margin:15px 0 0}.hero h2{font:italic clamp(22px,3vw,38px) Georgia,serif;color:#d0c7b6;margin:8px 0 28px}.hero blockquote{max-width:780px;margin:0 auto 36px;color:#c7c0b5;font:20px/1.65 Georgia,serif}.button{display:inline-block;border:1px solid var(--gold);padding:14px 22px;color:var(--gold);letter-spacing:.18em;font-size:11px}
+section{max-width:1400px;margin:auto;padding:92px 8vw}.full{max-width:none}.tag{color:var(--gold);letter-spacing:.25em;font-size:11px;margin-bottom:12px}h2{font:clamp(34px,5vw,58px) Georgia,serif;font-weight:500;margin:0 0 22px}.lead{max-width:920px;color:var(--muted);font-size:18px;line-height:1.75}.gold{color:var(--gold)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:38px}
+.card{background:linear-gradient(145deg,#141414,#0d0d0d);border:1px solid var(--line);padding:28px}.card h3{font:25px Georgia,serif;margin:8px 0 12px}.card p,.card li{color:var(--muted);line-height:1.7}.card ul{padding-left:18px}.num{color:var(--gold);font:40px Georgia,serif}
+.story{border-left:1px solid var(--gold);padding-left:28px;max-width:930px;color:#c5beb2;line-height:1.85;font-size:17px}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:45px}.flow .card{min-height:180px;position:relative}.flow .card:not(:last-child):after{content:"→";position:absolute;right:-13px;top:48%;color:var(--gold);z-index:3}
+.flow small{color:var(--gold);letter-spacing:.15em}.flow h3{font-size:18px}
+.shadow{padding:130px 8vw;text-align:center;background:radial-gradient(circle at center,rgba(183,154,90,.13),transparent 35%),linear-gradient(180deg,#080808,#0d0d0d,#080808);border-top:1px solid #211e19;border-bottom:1px solid #211e19}
+.shadow .hand{font:clamp(65px,12vw,160px) Georgia,serif;color:#15130f;line-height:.75;letter-spacing:.08em;user-select:none}.shadow h2{max-width:1050px;margin:-15px auto 25px}.shadow blockquote{font:clamp(22px,3vw,36px)/1.5 Georgia,serif;max-width:1050px;margin:35px auto;color:#ded6c7}.shadow p{max-width:820px;margin:auto;color:var(--muted);line-height:1.8}
+.network{margin-top:40px;border:1px solid var(--line);background:#0d0d0d;display:grid;grid-template-columns:1.1fr .9fr .9fr .9fr 1.1fr;gap:16px;align-items:center;padding:45px 30px;min-height:390px}.families{display:grid;gap:14px}.node,.stage{border:1px solid #3b3325;background:#121212;padding:16px;text-align:center}.stage{min-height:125px;display:grid;place-items:center;align-content:center;position:relative}.stage:not(:last-child):after{content:"→";position:absolute;right:-26px;color:var(--gold);font-size:24px}.stage b{font:22px Georgia,serif}.stage small{color:var(--gold);letter-spacing:.12em;margin-bottom:7px}.stage span{color:var(--muted);font-size:12px;margin-top:7px}.ombra{border-color:var(--gold)}.ombra b{color:var(--gold);font-size:27px}.world b{font-size:29px}
+.man{max-width:none;min-height:590px;display:flex;align-items:center;background:linear-gradient(90deg,#050505f5,#05050580),url("assets/images/handelsmann-hafen.png") center/cover}.man>div{max-width:720px}.status{display:inline-block;border:1px solid #674646;color:#d18d8d;padding:9px 13px;font-size:11px;letter-spacing:.14em;margin:5px 0 20px}
+.dealchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.chip{border:1px solid #342f27;background:#101010;padding:10px 14px;color:#b6aea1;font-size:12px}.rp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:35px}.rp div{border:1px solid var(--line);padding:18px;background:#101010;color:#aaa297}
+.bigline{text-align:center;font:clamp(30px,5vw,64px)/1.3 Georgia,serif;max-width:1150px;margin:auto}.closing{text-align:center;padding:125px 8vw 145px}.closing p{max-width:850px;margin:25px auto;color:var(--muted);line-height:1.8}.signature{color:var(--gold);font:27px Georgia,serif;letter-spacing:.16em;margin-top:35px}
+footer{border-top:1px solid var(--line);padding:25px 7vw;color:#716a60;font-size:11px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:1250px){
+  nav{padding:12px 3vw}
+  .logo{font-size:15px;letter-spacing:.14em}
+  .nav{gap:4px;font-size:9px;letter-spacing:.07em}
+  .nav a{padding:7px 8px}
+}
+@media(max-width:1050px){
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .flow .card:after{display:none}
+  .grid3,.rp{grid-template-columns:1fr 1fr}
+  .network{grid-template-columns:1fr;}
+  .stage:not(:last-child):after{content:"↓";right:auto;bottom:-27px}
+  nav{align-items:flex-start}
+  .nav{max-width:68%;row-gap:3px}
+}
+@media(max-width:760px){
+  nav{position:absolute;display:block;padding:13px 5vw}
+  .logo{text-align:center;font-size:14px}
+  .nav{max-width:none;justify-content:center;margin-top:9px;gap:3px}
+  .nav a{font-size:8px;padding:6px 7px;min-height:29px}
+  .hero{padding-top:155px}
+}
+@media(max-width:650px){section{padding:70px 6vw}.grid2,.grid3,.rp,.flow{grid-template-columns:1fr}.hero{padding-left:6vw;padding-right:6vw}}
+@media(max-width:480px){
+  .nav a{font-size:7px;letter-spacing:.04em;padding:5px 5px}
+  .logo{font-size:13px}
+}
+
+.trade-intro{
+  display:grid;
+  grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
+  gap:34px;
+  align-items:center;
+  margin-top:36px;
+}
+.trade-copy{
+  padding:26px 28px;
+  border-left:2px solid var(--gold);
+  background:linear-gradient(90deg,rgba(183,154,90,.07),rgba(183,154,90,0));
+}
+.trade-image{
+  position:relative;
+  overflow:hidden;
+  border:1px solid #3a3327;
+  background:#090909;
+  min-height:420px;
+}
+.trade-image img{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  object-fit:cover;
+  display:block;
+}
+.trade-image:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(5,5,5,.16),transparent 45%);
+}
+.trade-journey{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:10px;
+}
+.trade-stop{
+  min-height:148px;
+  border:1px solid #342f27;
+  background:linear-gradient(180deg,#141414,#0e0e0e);
+  padding:18px 12px;
+  text-align:center;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.trade-stop:not(:last-child):after{
+  content:"→";
+  position:absolute;
+  right:-16px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--gold);
+  font-size:22px;
+  z-index:3;
+}
+.trade-stop small{color:var(--gold);letter-spacing:.13em;font-size:10px;margin-bottom:8px}
+.trade-stop strong{font:16px Georgia,serif;color:var(--text);margin-bottom:8px}
+.trade-stop span{color:var(--muted);font-size:11px;line-height:1.45}
+.trade-stop.highlight{border-color:var(--gold);box-shadow:0 0 28px rgba(183,154,90,.08)}
+.trade-note{
+  margin-top:30px;
+  padding:24px 26px;
+  border:1px solid #342f27;
+  background:#0f0f0f;
+  color:var(--muted);
+  line-height:1.8;
+}
+.trade-note strong{color:var(--gold)}
+.trade-quote{
+  margin:48px auto 0;
+  max-width:1050px;
+  text-align:center;
+  font:clamp(24px,3vw,38px)/1.5 Georgia,serif;
+  color:#ded6c7;
+}
+@media(max-width:1050px){
+  .trade-intro{grid-template-columns:1fr}
+  .trade-journey{grid-template-columns:repeat(2,1fr)}
+  .trade-stop:not(:last-child):after{display:none}
+}
+@media(max-width:650px){
+  .trade-journey{grid-template-columns:1fr}
+  .trade-copy{padding:22px 18px}
+  .trade-image,.trade-image img{min-height:300px}
+}
+
+
+.harbor-person{
+  max-width:none;
+  min-height:620px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  padding:80px 8vw;
+  background:url("assets/images/handelsmann-hafen.png") center/cover no-repeat;
+  border-top:1px solid #211e19;
+  border-bottom:1px solid #211e19;
+}
+.harbor-person::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(to top,rgba(5,5,5,.70),rgba(5,5,5,.05) 58%,rgba(5,5,5,.04));
+}
+.harbor-person .caption{
+  position:relative;
+  z-index:2;
+  max-width:720px;
+  padding:24px 28px;
+  border-left:2px solid var(--gold);
+  background:rgba(7,7,7,.62);
+  backdrop-filter:blur(2px);
+}
+.harbor-person .caption h2{margin-bottom:12px}
+.harbor-person .caption p{color:#c0b8ac;line-height:1.7;margin:0}
+@media(max-width:650px){
+  .harbor-person{min-height:470px;padding:55px 6vw}
+  .harbor-person .caption{padding:20px 18px}
+}
+
+
+.material-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.material-actions a{display:inline-block;border:1px solid var(--gold);padding:12px 16px;color:var(--gold);letter-spacing:.12em;font-size:10px}
+.table-wrap{margin-top:28px;overflow-x:auto;border:1px solid var(--line);background:#0d0d0d}
+table.material-table{width:100%;border-collapse:collapse;min-width:760px}
+.material-table th,.material-table td{padding:15px 16px;border-bottom:1px solid #29251e;text-align:left;vertical-align:top}
+.material-table th{color:var(--gold);font-size:10px;letter-spacing:.13em;text-transform:uppercase;background:#12110f}
+.material-table td{color:#c3bbae;line-height:1.55}
+.material-table tr:last-child td{border-bottom:0}
+.material-table .price{white-space:nowrap;color:#e0d6c4;font-weight:600}
+.material-table .sum{color:var(--gold);font-weight:700}
+.material-disclaimer{margin-top:22px;padding:18px 20px;border-left:2px solid var(--gold);background:rgba(183,154,90,.06);color:var(--muted);line-height:1.7}
+.recipe-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:30px}
+.recipe{border:1px solid var(--line);background:linear-gradient(145deg,#141414,#0d0d0d);padding:25px}
+.recipe h3{font:24px Georgia,serif;margin:0 0 12px}.recipe ul{padding-left:18px;color:var(--muted);line-height:1.75}.recipe .cost{margin-top:18px;color:var(--gold);font-weight:600}
+@media(max-width:760px){.recipe-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<nav><div class="logo"><a href="akte.html">← AKTE</a> · L’OMBRA</div><div class="nav"><a href="#materialien">MATERIALIEN</a><a href="#qualitaet">QUALITÄT & PREISE</a><a href="akte.html#hersteller">← HERSTELLER</a></div></nav>
+<header class="hero" style="min-height:58vh">
+<div><div class="eyebrow">Narco City · Anhang zur Akte · LO-EC-MAT</div><h1>L’OMBRA</h1><h2>Materialien & Exportkalkulation</h2><blockquote>„Die Akte erklärt das Geschäft. Dieser Anhang zeigt den Aufwand dahinter.“</blockquote><a class="button" href="#materialien">TABELLEN ÖFFNEN ↓</a></div>
+</header>
+<section id="materialien" class="reveal">
+<div class="tag">01 · MATERIALIEN & KOSTEN</div>
+<h2>Was für die Veredelung benötigt wird.</h2>
+<p class="lead">Die Veredelung soll bewusst mit einfachen, legal erhältlichen und rein spielmechanischen Materialien funktionieren. Dadurch entsteht zusätzlicher Beschaffungs- und Logistikaufwand, ohne eine neue Drogenproduktion einzuführen.</p>
+
+<div class="table-wrap">
+<table class="material-table">
+<thead><tr><th>Material</th><th>Möglicher Bezugsort</th><th>RP-Funktion</th><th>Beispiel-Einkaufspreis</th></tr></thead>
+<tbody>
+<tr><td>Vakuumbeutel / Folie</td><td>Supermarkt</td><td>Grundverpackung für Exportware</td><td class="price">80 Narco-$</td></tr>
+<tr><td>Klebeband</td><td>Baumarkt / Supermarkt</td><td>Versiegelung der Verpackung</td><td class="price">60 Narco-$</td></tr>
+<tr><td>Etiketten-Set</td><td>Supermarkt / Schreibwarenladen</td><td>Kennzeichnung und Chargen-System</td><td class="price">50 Narco-$</td></tr>
+<tr><td>Einweghandschuhe</td><td>Apotheke / Supermarkt</td><td>Verbrauchsmaterial für die fiktive Aufbereitung</td><td class="price">60 Narco-$</td></tr>
+<tr><td>Verpackungspolster</td><td>Baumarkt</td><td>Schutz größerer Lieferungen</td><td class="price">90 Narco-$</td></tr>
+<tr><td>Qualitätssiegel</td><td>Spezial-/Importladen</td><td>Fiktives RP-Item für höherwertige Exportstufen</td><td class="price">120 Narco-$</td></tr>
+<tr><td>Transportbox</td><td>Baumarkt</td><td>Bündelung mehrerer Pakete für den Transport</td><td class="price">100 Narco-$</td></tr>
+<tr><td>Exportkiste</td><td>Baumarkt / Hafenhandel</td><td>Abschlussverpackung für Großlieferungen</td><td class="price">120 Narco-$</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="material-disclaimer"><b class="gold">Balancing-Hinweis:</b> Die Preise sind Beispielwerte für das Serverkonzept und können an die tatsächliche Narco-City-Wirtschaft angepasst werden. Die Materialien dienen ausschließlich einer fiktiven GTA-RP-Veredelungs- und Verpackungsmechanik; reale chemische Herstellungsprozesse sind nicht Bestandteil des Konzepts.</div>
+
+<div class="tag" style="margin-top:52px">BEDARF PRO EXPORTPAKET</div>
+<h2 style="font-size:clamp(30px,4vw,48px)">Einfach verständliche Herstellungsrezepte.</h2>
+<p class="lead">Die eigentliche Droge kommt weiterhin aus einer bestehenden Route. L’Ombra benötigt zusätzlich nur Verpackungs- und Qualitätsmaterialien, um daraus eine Exportstufe herzustellen.</p>
+
+<div class="recipe-grid">
+<div class="recipe"><h3>LSD · Exportpaket</h3><ul><li>10× angekaufte LSD-Verpackungen</li><li>2× Vakuumbeutel / Folie</li><li>1× Etiketten-Set</li><li>1× Verpackungspolster</li></ul><div class="cost">Grundware: ca. 12.500 $ · Material: ca. 300 $</div></div>
+<div class="recipe"><h3>Weed · Exportpaket</h3><ul><li>10× angekaufte Weed-Verpackungen</li><li>2× Vakuumbeutel / Folie</li><li>1× Klebeband</li><li>1× Etiketten-Set</li></ul><div class="cost">Grundware: ca. 12.500 $ · Material: ca. 270 $</div></div>
+<div class="recipe"><h3>MDMA · Exportpaket</h3><ul><li>10× angekaufte MDMA-Verpackungen</li><li>2× Vakuumbeutel / Folie</li><li>1× Etiketten-Set</li><li>1× Qualitätssiegel</li></ul><div class="cost">Grundware: ca. 12.500 $ · Material: ca. 330 $</div></div>
+<div class="recipe"><h3>Kokain · Exportpaket</h3><ul><li>10× angekaufte Kokain-Verpackungen</li><li>2× Vakuumbeutel / Folie</li><li>1× Klebeband</li><li>1× Qualitätssiegel</li></ul><div class="cost">Grundware: ca. 12.500 $ · Material: ca. 340 $</div></div>
+<div class="recipe"><h3>Crack · Exportpaket</h3><ul><li>10× angekaufte Crack-Verpackungen</li><li>2× Vakuumbeutel / Folie</li><li>1× Etiketten-Set</li><li>1× Qualitätssiegel</li></ul><div class="cost">Grundware: ca. 12.500 $ · Material: ca. 330 $</div></div>
+<div class="recipe"><h3>Meth · Exportpaket</h3><ul><li>10× angekaufte Meth-Verpackungen</li><li>2× Vakuumbeutel / Folie</li><li>1× Einweghandschuhe</li><li>1× Qualitätssiegel</li></ul><div class="cost">Grundware: ca. 12.500 $ · Material: ca. 340 $</div></div>
+<div class="recipe"><h3>Heroin · Exportpaket</h3><ul><li>10× angekaufte Heroin-Verpackungen</li><li>2× Vakuumbeutel / Folie</li><li>1× Verpackungspolster</li><li>1× Qualitätssiegel</li></ul><div class="cost">Grundware: ca. 12.500 $ · Material: ca. 370 $</div></div>
+<div class="recipe"><h3>Grundprinzip</h3><ul><li>Ø Ankauf je Verpackung: 1.250 $</li><li>10 Verpackungen je Exportpaket: 12.500 $</li><li>Materialpreise: 50–120 $ je Item</li><li>Qualitätsstufen erhöhen Materialbedarf und Handelswert</li></ul><div class="cost">Alle Werte sind Balancing-Beispiele.</div></div>
+</div>
+
+<div class="tag" style="margin-top:52px">GROSSLIEFERUNG</div>
+<div class="table-wrap">
+<table class="material-table">
+<thead><tr><th>Herstellung</th><th>Benötigte Exportware</th><th>Zusatzmaterial</th><th>Beispiel-Materialkosten</th></tr></thead>
+<tbody>
+<tr><td>1× Kleine Exportkiste</td><td>3× beliebige Exportpakete</td><td>1× Transportbox + 1× Verpackungspolster</td><td class="price">190 Narco-$</td></tr>
+<tr><td>1× Große Exportkiste</td><td>6× beliebige Exportpakete</td><td>1× Exportkiste + 2× Verpackungspolster + 1× Qualitätssiegel</td><td class="price">420 Narco-$</td></tr>
+<tr><td>1× Handelsmann-Lieferung</td><td>z. B. 3× große Exportkisten</td><td>keine weitere Verarbeitung – nur Transport zum Schiff</td><td class="sum">abhängig vom Auftrag</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="qualitaet" class="reveal">
+<div class="tag">02 · QUALITÄTSSTUFEN & VERKAUF</div>
+<h2>Mehr Aufwand. Höhere Exportqualität. Höherer Wert.</h2>
+<p class="lead">Die Veredelung soll nicht nur aus einem einzigen Rezept bestehen. Jedes Exportpaket kann mehrere Qualitätsstufen erreichen. Höhere Stufen benötigen zusätzliche Verpackungs- und Qualitätsmaterialien, mehr Bearbeitungszeit und erhalten dafür beim Handelsmann einen höheren möglichen Verkaufspreis. Die Werte sind reine GTA-RP-Balancingvorschläge.</p>
+
+<div class="grid3">
+<div class="card"><div class="num">I</div><h3>Raffinata</h3><p><b class="gold">Standard-Exportqualität</b></p><p>Grundware wird gebündelt, versiegelt und als Exportpaket vorbereitet. Geringster Materialaufwand und Einstieg in das Exportgeschäft.</p></div>
+<div class="card"><div class="num">II</div><h3>Selezionata</h3><p><b class="gold">Ausgewählte Qualität</b></p><p>Zusätzliche Qualitätskontrolle, Kennzeichnung und hochwertigere Transportverpackung. Höherer Materialbedarf und besserer Verkaufspreis.</p></div>
+<div class="card"><div class="num">III</div><h3>L’Ombra</h3><p><b class="gold">Premium-Exportcharge</b></p><p>Höchste spielmechanische Qualitätsstufe. Benötigt vollständige Verpackung, Qualitätssiegel und Exportkiste und ist für besonders lukrative Handelsmann-Aufträge gedacht.</p></div>
+</div>
+
+<div class="tag" style="margin-top:52px">MATERIALBEDARF JE QUALITÄTSSTUFE</div>
+<div class="table-wrap">
+<table class="material-table">
+<thead><tr><th>Qualität</th><th>Grundlage</th><th>Zusätzliche Materialien</th><th>Zusatzkosten</th><th>Preisfaktor</th></tr></thead>
+<tbody>
+<tr><td><b>Raffinata · I</b></td><td>10× angekaufte Verpackungen = ca. 12.500 $</td><td>2× Vakuumbeutel/Folie + 1× Klebeband + 1× Etiketten-Set</td><td class="price">ca. 270 Narco-$</td><td class="sum">Basis</td></tr>
+<tr><td><b>Selezionata · II</b></td><td>1× Raffinata-Paket</td><td>1× Qualitätssiegel + 1× Verpackungspolster</td><td class="price">+210 Narco-$</td><td class="sum">höherer Handelswert</td></tr>
+<tr><td><b>L’Ombra · III</b></td><td>1× Selezionata-Paket</td><td>1× Qualitätssiegel + 1× Transportbox</td><td class="price">+220 Narco-$</td><td class="sum">Premium-Handelswert</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tag" style="margin-top:52px">BEISPIEL-VERKAUFSPREISE</div>
+<h2 style="font-size:clamp(30px,4vw,48px)">Was veredelte Pakete beim Handelsmann bringen könnten.</h2>
+<p class="lead">Die folgende Tabelle zeigt ein mögliches Verhältnis zwischen Drogenart und Qualitätsstufe. Sie ist nicht als feste Serverwirtschaft gedacht, sondern als nachvollziehbare Grundlage für das Balancing. Der tatsächliche Ankaufspreis der Grundware bleibt Verhandlungssache zwischen L’Ombra und den jeweiligen Produzenten.</p>
+<div class="table-wrap">
+<table class="material-table">
+<thead><tr><th>Exportware</th><th>Raffinata · I</th><th>Selezionata · II</th><th>L’Ombra · III</th><th>Gedanke dahinter</th></tr></thead>
+<tbody>
+<tr><td>Weed-Exportpaket</td><td class="price">14.500 $</td><td class="price">16.000 $</td><td class="sum">17.500 $</td><td>günstiger Einstieg, gut für größere Mengen</td></tr>
+<tr><td>LSD-Exportpaket</td><td class="price">15.000 $</td><td class="price">16.500 $</td><td class="sum">18.000 $</td><td>solider Mittelwert mit guter Skalierung</td></tr>
+<tr><td>MDMA-Exportpaket</td><td class="price">15.250 $</td><td class="price">16.750 $</td><td class="sum">18.250 $</td><td>leicht über LSD angesetzt</td></tr>
+<tr><td>Meth-Exportpaket</td><td class="price">15.500 $</td><td class="price">17.250 $</td><td class="sum">19.000 $</td><td>höhere Marge bei stärkerer Nachfrage</td></tr>
+<tr><td>Crack-Exportpaket</td><td class="price">15.750 $</td><td class="price">17.500 $</td><td class="sum">19.250 $</td><td>hochwertiger Export mit guter Handelsspanne</td></tr>
+<tr><td>Kokain-Exportpaket</td><td class="price">16.000 $</td><td class="price">17.750 $</td><td class="sum">19.500 $</td><td>Premium-Segment des regulären Exports</td></tr>
+<tr><td>Heroin-Exportpaket</td><td class="price">16.250 $</td><td class="price">18.000 $</td><td class="sum">20.000 $</td><td>höchster vorgeschlagener Basiswert</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tag" style="margin-top:52px">BEISPIEL FÜR DIE KALKULATION</div>
+<div class="grid2">
+<div class="card"><h3>Ein Geschäft muss sich rechnen</h3><p>Beispiel Kokain, Qualitätsstufe II: Für 10 Verpackungen zahlt L’Ombra bei einem durchschnittlichen Ankaufspreis von <b class="gold">1.250 $ pro Verpackung</b> insgesamt <b class="gold">12.500 $</b>. Für Raffinata und die Aufwertung auf Selezionata fallen zusammen etwa <b class="gold">480 $</b> an fiktiven Verpackungs- und Qualitätsmaterialien an. Gesamteinsatz: <b class="gold">12.980 $</b>. Bei einem Beispiel-Verkaufspreis von <b class="gold">17.750 $</b> verbleiben vor Transport- und weiteren RP-Kosten rund <b class="gold">4.770 $</b> Handelsspanne.</p></div>
+<div class="card"><h3>Die Marge ist nicht garantiert</h3><p>Der Ankaufspreis wird ausgehandelt. Wer teuer einkauft, verdient weniger. Zusätzlich können Nachfrage, Sonderaufträge oder schlechte Marktphasen den Handelsmann-Preis verändern. Dadurch bleibt Verhandlung wichtiger als stumpfes Farmen.</p></div>
+</div>
+
+<div class="tag" style="margin-top:52px">DYNAMISCHER WELTMARKT</div>
+<div class="table-wrap">
+<table class="material-table">
+<thead><tr><th>Marktlage</th><th>Modifikator</th><th>Beispiel bei 19.500 Narco-$</th><th>RP-Auswirkung</th></tr></thead>
+<tbody>
+<tr><td>Übersättigt</td><td>-15 %</td><td class="price">16.575 Narco-$</td><td>L’Ombra kauft weniger oder drückt Einkaufspreise</td></tr>
+<tr><td>Schwach</td><td>-5 %</td><td class="price">18.525 Narco-$</td><td>geringere Marge, selektivere Einkäufe</td></tr>
+<tr><td>Normal</td><td>±0 %</td><td class="price">19.500 Narco-$</td><td>regulärer Export</td></tr>
+<tr><td>Gefragt</td><td>+10 %</td><td class="price">21.450 Narco-$</td><td>verstärkte Nachfrage bei Produzenten</td></tr>
+<tr><td>Engpass / Sonderauftrag</td><td>+15 %</td><td class="sum">22.425 Narco-$</td><td>lukrative, zeitlich begrenzte Lieferung</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="material-disclaimer"><b class="gold">Balancing-Vorschlag:</b> Der Handelsmann sollte nicht dauerhaft die höchste Stufe verlangen oder bezahlen. Qualitätsstufen, Marktmodifikatoren und wechselnde Aufträge sorgen dafür, dass sich der beste Einkaufspreis, verfügbare Materialien und Beziehungen zu anderen Familien auf den Gewinn auswirken. Sämtliche Veredelungsschritte sind rein fiktive Spielmechaniken und beschreiben keine reale Drogenherstellung.</div>
+<div class="material-actions"><a href="#materialien">↑ ZUR MATERIALTABELLE</a><a href="akte.html#netzwerk">ZURÜCK ZUM HANDELSNETZ →</a></div>
+</section>
+
+
+<footer><div><strong>L’OMBRA</strong><br><span>Materialien · Qualität · Beispielpreise</span></div><div><a href="akte.html">← ZURÜCK ZUR AKTE</a></div></footer>
+<script>const obs=new IntersectionObserver((e)=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));</script>
+</body></html>
